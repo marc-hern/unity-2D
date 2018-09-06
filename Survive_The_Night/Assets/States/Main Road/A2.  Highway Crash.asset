@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4999facdbeed343a5e64e5eb364afd, type: 3}
+  m_Name: A2.  Highway Crash
+  m_EditorClassIdentifier: 
+  storyText: 'You grab the gun as the assailant approaches your car.  He violently
+    smashes his fists against the windshield of your car paying no mind to the wounds
+    he is inflicting upon himself.
+
+
+    The glass begins to crack.
+
+
+    You warn the assailant you will shoot if he does not stop.  He does not.  The
+    lunatic begins to tear away the glass.  Just as he is about to grab your neck
+    you shoot and dispatch him.
+
+
+    What do you do?
+
+    1.  Exit the vehicle and survey the area.
+
+    2.  Inspect the other cars for other survivors.'
+  nextStates:
+  - {fileID: 11400000, guid: 9cd87265ed387d74da50f253bdedd88e, type: 2}
+  - {fileID: 11400000, guid: 8e9c45cb7618d654ea62621f25114eb9, type: 2}

@@ -9,6 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c4999facdbeed343a5e64e5eb364afd, type: 3}
-  m_Name: Room 1
+  m_Name: A0.  Introduction
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: 'Welcome to this game.
+
+
+    Carefully choose your path.
+
+
+    At each area you''ll be required to choose your path by using your keyboard.  At
+    any point push "q" to quit.
+
+
+    Press 1 to begin.'
+  nextStates:
+  - {fileID: 11400000, guid: ee780731807d5e047afa81bdf8c8ac9d, type: 2}

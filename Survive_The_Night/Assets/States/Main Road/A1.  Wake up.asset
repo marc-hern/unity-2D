@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c4999facdbeed343a5e64e5eb364afd, type: 3}
-  m_Name: StartingState
+  m_Name: A1.  Wake up
   m_EditorClassIdentifier: 
   storyText: 'Darkness.
 
@@ -28,3 +28,6 @@ MonoBehaviour:
     1.  Grab the gun.
 
     2.  Open the door and run.'
+  nextStates:
+  - {fileID: 11400000, guid: 23c13476e1ca57c42a37b9c63e6c1885, type: 2}
+  - {fileID: 11400000, guid: 680df5b913ce8134593a9fc5fff0aeae, type: 2}
