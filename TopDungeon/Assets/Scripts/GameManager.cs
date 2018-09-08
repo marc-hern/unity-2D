@@ -17,6 +17,14 @@ public class GameManager : MonoBehaviour {
 	public int gold;
 	public int experience;
 
+	// SAVE STATE VARS
+	/*
+		INT preferedSkin
+		INT gold
+		INT experience
+		INT weaponLevel
+	*/
+
 	private void Awake(){
 		if (GameManager.instance != null){
 			Destroy(gameObject);
@@ -28,11 +36,28 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void SaveState(){
-		Debug.Log("SaveState");
+		string saving = "";
+
+		saving += "0" + "|";
+		saving += gold.ToString() + "|";
+		saving += experience.ToString() + "|";
+		saving += "1";
+
+		PlayerPrefs.SetString("SaveState", saving);
 	}
 
 	public void LoadState(Scene s, LoadSceneMode mode){
-		Debug.Log("LoadState");
+
+		if (!PlayerPrefs.HasKey("SaveState")){
+			return;
+		}
+
+		string[] data = PlayerPrefs.GetString("SaveState").Split('|');
+
+		// preferedSkin
+		gold = int.Parse(data[1]);
+		experience = int.Parse(data[2]);
+		// weaponLevel
 	}
 	
 }
