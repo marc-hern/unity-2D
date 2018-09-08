@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
 	public List<int> xpTable;
 
 	public Player player;
+	public FloatingText floatingText;
 
 	public int gold;
 	public int experience;
