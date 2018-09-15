@@ -11,8 +11,9 @@ public class Chest : Collectable {
 		if (!collected){
 			collected = true;
 			GetComponent<SpriteRenderer>().sprite = emptyChest;
+			GameManager.instance.gold += goldAmount;
 			GameManager.instance.ShowText(
-				"+ " + goldAmount + "gold",
+				"+ " + goldAmount + " gold",
 				25,
 				Color.yellow,
 				transform.position,

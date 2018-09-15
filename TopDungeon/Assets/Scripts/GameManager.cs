@@ -7,6 +7,20 @@ public class GameManager : MonoBehaviour {
 
 	public static GameManager instance;
 
+	private void Awake(){
+		if (GameManager.instance != null){
+			Destroy(gameObject);
+			Destroy(player.gameObject);
+            Destroy(floatingTextManager.gameObject);
+            // Destroy(hud);
+            // Destroy(menu.gameObject);
+			return;
+		}
+		instance = this;
+		SceneManager.sceneLoaded += LoadState;
+		// SceneManager.sceneLoaded += OnSceneLoaded;
+	}
+
 	public List<Sprite> playerSprites;
 	public List<Sprite> weaponSprites;
 	public List<int> weaponPrices;
@@ -17,16 +31,6 @@ public class GameManager : MonoBehaviour {
 
 	public int gold;
 	public int experience;
-
-	private void Awake(){
-		if (GameManager.instance != null){
-			Destroy(gameObject);
-			return;
-		}
-		instance = this;
-		SceneManager.sceneLoaded += LoadState;
-		DontDestroyOnLoad(gameObject);
-	}
 
 	// Floating text
 	public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration){
